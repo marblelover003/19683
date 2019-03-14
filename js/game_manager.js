@@ -125,7 +125,13 @@ GameManager.prototype.moveTile = function (tile, cell) {
   tile.updatePosition(cell);
 };
 GameManager.prototype.canMerge = function (cellValue1, cellValue2) {
-  if (cellValue1 === cellValue2 || cellValue1 === cellValue2 * 2 || cellValue2 === cellValue1 * 2) return true; else return false;
+  if (cellValue1 === cellValue2) {
+    for (var i = 1; i < 20; i++) {
+      if (cellValue1 === Math.pow(3, i)) {
+        return true;
+      }
+  } else if (cellValue1 === cellValue2 * 2 || cellValue2 === cellValue1 * 2) return true;
+  return false;
 }
 // Move tiles on the grid in the specified direction
 GameManager.prototype.move = function (direction) {
