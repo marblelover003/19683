@@ -131,7 +131,7 @@ GameManager.prototype.canMerge = function (cellValue1, cellValue2) {
         return true;
       }
     }
-  } else if (cellValue1 === cellValue2 * 2 || cellValue2 === cellValue1 * 2) return true;
+  } else if (cellValue1 === cellValue2 * 2 || cellValue2 === cellValue1 * 2) {return true;}
   return false;
 }
 // Move tiles on the grid in the specified direction
