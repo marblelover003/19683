@@ -130,6 +130,7 @@ GameManager.prototype.canMerge = function (cellValue1, cellValue2) {
       if (cellValue1 === Math.pow(3, i)) {
         return true;
       }
+    }
   } else if (cellValue1 === cellValue2 * 2 || cellValue2 === cellValue1 * 2) return true;
   return false;
 }
