@@ -125,11 +125,12 @@ GameManager.prototype.moveTile = function (tile, cell) {
   tile.updatePosition(cell);
 };
 GameManager.prototype.canMerge = function (cellValue1, cellValue2) {
-  if (cellValue1 === cellValue2 || cellValue1 === cellValue2*2 || cellValue1 === cellValue2*3 || cellValue1 === cellValue2*4 || cellValue2 === cellValue1*2 || cellValue2 === cellValue1*3 || cellValue2 === cellValue1*4) {
-    return true;
-  } else {
-    return false;
+  for (var i = 0; i < 72; i++) {
+    if ((cellValue1 === cellValue2 || cellValue1 === cellValue2*2 || cellValue1 === cellValue2*3 || cellValue1 === cellValue2*4 || cellValue2 === cellValue1*2 || cellValue2 === cellValue1*3 || cellValue2 === cellValue1*4) && cellValue1 + cellValue2 <= Math.pow(5,i)) {
+      return true;
+    }
   }
+  return false;
 }
 // Move tiles on the grid in the specified direction
 GameManager.prototype.move = function (direction) {
