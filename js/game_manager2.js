@@ -125,21 +125,11 @@ GameManager.prototype.moveTile = function (tile, cell) {
   tile.updatePosition(cell);
 };
 GameManager.prototype.canMerge = function (cellValue1, cellValue2) {
-  var x = cellValue1, y = cellValue2, z;
-  for (var i = 0; i < 72; i++) {
-    z = Math.pow(5, i);
-    if (x === z*1 && y === z*1) return true;
-    if (x === z*1 && y === z*2) return true;
-    if (x === z*1 && y === z*3) return true;
-    if (x === z*1 && y === z*4) return true;
-    if (x === z*2 && y === z*1) return true;
-    if (x === z*2 && y === z*2) return true;
-    if (x === z*2 && y === z*3) return true;
-    if (x === z*3 && y === z*1) return true;
-    if (x === z*3 && y === z*2) return true;
-    if (x === z*4 && y === z*1) return true;
+  if (cellValue1 === cellValue2 || cellValue1 === cellValue2*2 || cellValue1 === cellValue2*3 || cellValue1 === cellValue2*4 || cellValue2 === cellValue1*2 || cellValue2 === cellValue1*3 || cellValue2 === cellValue1*4) {
+    return true;
+  } else {
+    return false;
   }
-  return false;
 }
 // Move tiles on the grid in the specified direction
 GameManager.prototype.move = function (direction) {
