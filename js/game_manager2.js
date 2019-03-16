@@ -126,9 +126,8 @@ GameManager.prototype.moveTile = function (tile, cell) {
 };
 GameManager.prototype.canMerge = function (cellValue1, cellValue2) {
   for (var i = 0; i < 72; i++) {
-    if (cellValue1 === cellValue2 || cellValue1 === cellValue2*2 || cellValue1 === cellValue2*3 || cellValue1 === cellValue2*4 || cellValue2 === cellValue1*2 || cellValue2 === cellValue1*3 || cellValue2 === cellValue1*4) {
-      if (cellValue1 + cellValue2 <= Math.pow(5, i+1)) return true;
-    }
+    var x = Math.pow(5, i);
+    if (cellValue1 + cellValue2 === x*2 || cellValue1 + cellValue2 === x*3 || cellValue1 + cellValue2 === x*4 || cellValue1 + cellValue2 === x*5) return true;
   }
   return false;
 }
