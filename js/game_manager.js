@@ -126,7 +126,7 @@ GameManager.prototype.moveTile = function (tile, cell) {
 };
 GameManager.prototype.canMerge = function (cellValue1, cellValue2) {
   if (cellValue1 === cellValue2) {
-    for (var i = 1; i < 32; i++) {
+    for (var i = 0; i < 32; i++) {
       if (cellValue1 === Math.pow(3, i)) {
         return true;
       }
