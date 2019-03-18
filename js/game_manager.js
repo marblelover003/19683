@@ -126,7 +126,7 @@ GameManager.prototype.moveTile = function (tile, cell) {
 };
 GameManager.prototype.canMerge = function (cellValue1, cellValue2) {
   if (cellValue1 === cellValue2) {
-    for (var i = 1; i < 20; i++) {
+    for (var i = 1; i < 32; i++) {
       if (cellValue1 === Math.pow(3, i)) {
         return true;
       }
@@ -174,8 +174,8 @@ GameManager.prototype.move = function (direction) {
           // Update the score
           self.score += merged.value;
 
-          // The mighty 6561 tile
-          if (merged.value === 6561) self.won = true;
+          // The mighty 19683 tile
+          if (merged.value === 19683) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }
@@ -264,7 +264,7 @@ GameManager.prototype.tileMatchesAvailable = function () {
 
           var other  = self.grid.cellContent(cell);
 
-          if (other && other.value === tile.value) {
+          if (other && (other.value === tile.value || other.value === tile.value * 2 || tile.value === other.value * 2)) {
             return true; // These two tiles can be merged
           }
         }
