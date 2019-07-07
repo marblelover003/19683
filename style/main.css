@@ -1,10 +1,11 @@
 @import url(fonts/clear-sans.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto|Montserrat");
 html, body {
   margin: 0;
   padding: 0;
   background: #faf8ef;
   color: #776e65;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
 body {
@@ -62,7 +63,8 @@ h1.title {
   border-radius: 3px;
   color: white;
   margin-top: 8px;
-  text-align: center; }
+  text-align: center;
+  font-family: Montserrat; }
   .score-container:after, .best-container:after {
     position: absolute;
     width: 100%;
@@ -327,7 +329,7 @@ hr {
     text-align: center;
     font-weight: bold;
     z-index: 10;
-    font-size: 55px; }
+    font: 55px "Clear Sans"; }
   .tile.tile-1 .tile-inner {
     background: #eee4da; }
   .tile.tile-2 .tile-inner {
