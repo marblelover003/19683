@@ -355,7 +355,8 @@ hr {
   .tile.tile-81 .tile-inner {
     color: #f9f6f2;
     background: #f59563;
-    font-size: 75px; }
+    font-size: 75px;
+    box-shadow: 0 0 30px 10px rgba(255, 0, 0, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048); }
   .tile.tile-162 .tile-inner {
     color: #f9f6f2;
     background: #f68961;
@@ -364,7 +365,8 @@ hr {
   .tile.tile-243 .tile-inner {
     color: #f9f6f2;
     background: #f67c5f;
-    font-size: 50px; }
+    font-size: 50px;
+    box-shadow: 0 0 30px 10px rgba(255, 0, 0, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); }
   .tile.tile-486 .tile-inner {
     color: #f9f6f2;
     background: #f66d4d;
@@ -373,7 +375,8 @@ hr {
   .tile.tile-729 .tile-inner {
     color: #f9f6f2;
     background: #f65e3b;
-    font-size: 50px; }
+    font-size: 50px;
+    box-shadow: 0 0 30px 10px rgba(255, 0, 0, 0.63492), inset 0 0 0 1px rgba(255, 255, 255, 0.38095); }
   .tile.tile-1458 .tile-inner {
     color: #f9f6f2;
     background: #f64f29;
