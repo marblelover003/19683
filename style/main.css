@@ -1,5 +1,5 @@
 @import url(fonts/clear-sans.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:400,700|Roboto+Condensed:400,700");
 html, body {
   margin: 0;
   padding: 0;
@@ -64,7 +64,7 @@ h1.title {
   color: white;
   margin-top: 8px;
   text-align: center;
-  font-family: Montserrat; }
+  font-family: "Roboto Condensed"; }
   .score-container:after, .best-container:after {
     position: absolute;
     width: 100%;
@@ -346,7 +346,8 @@ hr {
   .tile.tile-27 .tile-inner {
     color: #f9f6f2;
     background: #f2b179;
-    font-size: 75px; }
+    font-size: 75px;
+    box-shadow: 0 0 30px 10px rgba(255, 0, 0, 0.15873), inset 0 0 0 1px rgba(255, 255, 255, 0.09524); }
   .tile.tile-54 .tile-inner {
     color: #f9f6f2;
     background: #f4a36e;
